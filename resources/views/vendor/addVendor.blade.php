@@ -3,6 +3,22 @@
 @section('content')
 
     <div class="container">
+        {{--log in error--}}
+        @if (count($errors) > 0)
+            <div class="bs-example bs-example-standalone" data-example-id=dismissible-alert-js>
+                <div class="alert alert-danger alert-dismissible fade in" role=alert>
+                    <button type=button class=close data-dismiss=alert aria-label=Close><span aria-hidden=true>&times;</span>
+                    </button>
+                    <strong>อุ๊ปส์! </strong> กรุณากรอกข้อมูลให้ถูกต้อง <br>
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }} </li>
+                        @endforeach
+                    </ul>
+                </div>
+            </div>
+        @endif
+
         <h2>เพิ่มทะเบียนผู้ขาย</h2>
         <form action="/add-vendor" method="post">
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
@@ -36,10 +52,10 @@
                         <label>เลขที่ 1</label>
                         <input type="text" class="form-control" placeholder="2922/339 ถนน เพชรบุรี, ตำบล ในเมือง" name="line1">
                     </div>
-                    <div class="form-group col-md-6">
-                        <label>เลขที่ 2</label>
-                        <input type="text" class="form-control" name="line2">
-                    </div>
+                    {{--<div class="form-group col-md-6">--}}
+                        {{--<label>เลขที่ 2</label>--}}
+                        {{--<input type="text" class="form-control" name="line2">--}}
+                    {{--</div>--}}
                     <div class="form-group col-md-6">
                         <label>อำเภอ</label>
                         <input type="text" class="form-control" placeholder="เมือง" name="city">

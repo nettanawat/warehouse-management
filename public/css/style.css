@@ -11,3 +11,26 @@ body{
     transform: translateY(-50%);
 }
 
+.footer{
+    bottom: 0px;
+    height: 30px;
+    line-height: 30px;
+    position: fixed;
+    background-color: black;
+}
+.footer-content{
+    color: grey;
+}
+.footer-content:hover{
+    color: darkorange;
+}
+
+.footer-button{
+    background-color: transparent;
+    color: whitesmoke;
+    border: none;
+}
+.footer-button:hover {
+    color: darkorange;
+}
+

@@ -54,7 +54,7 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'host' => 'localhost',
+            'host' => '127.0.0.1',
             'port' => env('DB_PORT', '3306'),
             'database' => 'warehouse_management',
             'username' => 'root',
