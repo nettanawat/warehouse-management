@@ -1,0 +1,13 @@
+body{
+    padding-top: 70px;
+}
+
+.parent {
+    position: relative;
+}
+.child {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
