@@ -28,9 +28,10 @@ Route::group(['middleware' => ['web']], function () {
 Route::group(['middleware' => ['web', 'auth']], function () {
 
     Route::get('/add-account', 'Reg\RegistrationController@register');
-    Route::get('/vendor', 'SupplierController@index');
-    Route::get('/add-vendor', 'SupplierController@create');
-    Route::post('/add-vendor', 'SupplierController@store');
+    Route::get('/vendor', 'VendorController@index');
+    Route::get('/add-vendor', 'VendorController@create');
+
+    Route::post('/add-vendor', 'VendorController@store');
     Route::get('/', function (){
         return view('dashboard');
     });
