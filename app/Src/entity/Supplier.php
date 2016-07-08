@@ -8,11 +8,11 @@ class Supplier extends Model
 {
     protected $table = 'suppliers';
 
-    public function supplierAddresses(){
-        return $this->hasMany('App\Src\entity\SupplierAddress');
+    public function supplierAddress(){
+        return $this->hasOne('App\Src\entity\SupplierAddress', 'suppliers_id');
     }
 
     public function itemSupplier(){
-        return $this->hasMany('App\Src\entity\ItemSupplier');
+        return $this->hasMany('App\Src\entity\ItemSupplier', 'suppliers_id');
     }
 }

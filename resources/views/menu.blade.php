@@ -15,7 +15,15 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li><a href="/vendor">ผู้ขาย <span class="sr-only">(current)</span></a></li>
+                    {{--ผู้ขาย--}}
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ผู้ขาย <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/add-vendor"><i class="fa fa-plus-circle" aria-hidden="true"></i> เพิ่มทะเบียนผู้ขาย</a></li>
+                            <li><a href="/add-vendor-address"><i class="fa fa-plus-circle" aria-hidden="true"></i> เพิ่มที่อยู่ผู้ขาย</a></li>
+                            <li><a href="/vendor-report"><i class="fa fa-area-chart" aria-hidden="true"></i> ดูภาพรวมผู้ขาย</a></li>
+                        </ul>
+                    </li>
                     {{--สินค้า--}}
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">สินค้า <span class="caret"></span></a>

@@ -12,7 +12,9 @@
 */
 
 Route::group(['middleware' => ['web']], function () {
-
+    Route::get('/pagenotfound', function () {
+        return view('errors.404');
+    });
 
 
 //    Route::get('/admin/register', 'reg\RegistrationController@register');
@@ -29,8 +31,10 @@ Route::group(['middleware' => ['web', 'auth']], function () {
 
     Route::get('/add-account', 'Reg\RegistrationController@register');
     Route::get('/vendor', 'VendorController@index');
+    Route::get('/vendor/{id}', 'VendorController@show');
     Route::get('/add-vendor', 'VendorController@create');
-
+    Route::get('/add-vendor-address', 'SuplierAddressController@create');
+    Route::post('/add-vendor-address', 'SuplierAddressController@store');
     Route::post('/add-vendor', 'VendorController@store');
     Route::get('/', function (){
         return view('dashboard');

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Permission Denied | WM</title>
+    <title>@yield('title') | Warehouse Management</title>
     <link rel="shortcut icon" href="{!! asset('resources/images/wm-logo.jpg') !!}" type="image/jpg">
     <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
     <link href="{!! asset('css/bootstrap-3.3.6/css/bootstrap.min.css') !!}" rel="stylesheet" type="text/css">
